@@ -63,6 +63,7 @@ arch_user_stow() {
     mkdir -p ~/.config/ranger
     mkdir -p ~/.i3/scripts
     mkdir -p ~/.mplayer
+    mkdir -p ~/.vim/bundle/neobundle.vim
 
     cd ~/.dotfiles
     stow dunst -t ~

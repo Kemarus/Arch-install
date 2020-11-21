@@ -75,7 +75,7 @@ arch_base_packages_dotfiles_install() {
     pacman -S --noconfirm ${basePackages[*]}
 
     cd /home/$userName
-    git clone https://github.com/Kemarus/.dotfiles.git
+    git clone https://github.com/Kemarus/.dotfiles.git --recursive
     cd /home/$userName/.dotfiles
     git checkout virtual_machine
 
