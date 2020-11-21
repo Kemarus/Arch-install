@@ -81,7 +81,12 @@ arch_user_stow() {
     stow zsh -t ~
 }
 
+arch_vim() {
+    mkdir -p ~/.cache/vim
+}
+
 arch_aur_manager
 arch_aur_packages_install
 arch_oh_my_zsh_install
 arch_user_stow
+arch_vim
