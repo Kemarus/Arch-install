@@ -1,9 +1,5 @@
 #!/bin/bash
 
-timezone="Europe/Paris"
-network=$(ip link | grep enp | gawk '{print $2}' | gawk -F: '{print $1}')
-
-
 #Rank mirrors by speed. Takes a while.
 arch_rankmirrors() {
     echo "Ranking mirrors. May take a while."

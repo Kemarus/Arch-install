@@ -1,6 +1,8 @@
 #!/bin/bash
 
+timezone="Europe/Paris"
 hostname="virtualbox-arch"
+network=$(ip link | grep enp | gawk '{print $2}' | gawk -F: '{print $1}')
 
 rootPassword="password"
 userName="username"
@@ -41,6 +43,7 @@ packages=(
     virtualbox-guest-utils
     vlc
     wget
+    xdg-user-dirs
     zathura-pdf-poppler
     zsh
     zsh-completions
@@ -100,6 +103,7 @@ arch_user_config() {
 
     useradd -m -G wheel "$userName"
     echo "$userName:$userPassword" | chpasswd
+    runuser -l "$userName" -c "xdg-user-dirs-update"
 
     #Create user's home directories
     mv /root/user_install.sh /home/$userName
