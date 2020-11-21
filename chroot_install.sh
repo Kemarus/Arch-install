@@ -27,6 +27,7 @@ packages=(
     keepassx2
     lightdm
     lightdm-gtk-greeter
+    linux-headers
     mpv
     ncdu
     numix-themes
@@ -131,6 +132,7 @@ arch_stow(){
     cp lightdm-gtk-greeter.conf lightdm_wallpaper.png zerg.png /etc/lightdm
     cd /home/$userName/.dotfiles
     stow X11 -t /etc
+    stow virtualbox -t /etc
 }
 
 arch_services() {
