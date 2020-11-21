@@ -26,7 +26,6 @@ packages=(
     gnome-disk-utility
     gvim-python3
     i3
-    lib32-freetype2-infinality-ultimate
     lightdm
     lightdm-gtk-greeter
     livestreamer
@@ -99,6 +98,7 @@ arch_base_packages_dotfiles_install() {
 
 arch_packages_install() {
     pacman -S --noconfirm infinality-bundle
+    pacman -S --noconfirm lib32-freetype2-infinality-ultimate
     pacman -S --noconfirm ${packages[*]}
 }
 
