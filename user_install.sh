@@ -9,12 +9,10 @@ aur_packages=(
     numix-frost-themes
     numix-icon-theme-git
     powerline-fonts-git
-    quickswitch-i3
     rofi
     rssowl
     sublime-text-dev
     ttf-font-awesome
-    ttf-inconsolata-lgc-github
     tor-browser-en
 )
 
