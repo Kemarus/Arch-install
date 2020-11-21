@@ -17,19 +17,15 @@ packages=(
     alsa-utils
     chromium
     cinnamon
-    clementine
     dunst
     eog
     evince
     firefox
-    flashplugin
     gnome-disk-utility
-    gvim-python3
+    gvim
     i3
     lightdm
     lightdm-gtk-greeter
-    livestreamer
-    mplayer
     mpv
     ncdu
     numix-themes
@@ -37,13 +33,11 @@ packages=(
     ranger
     rofi
     rxvt-unicode
-    skype
     sysstat
     thunderbird
     ttf-anonymous-pro
     ttf-ubuntu-font-family-ib
     virtualbox-guest-utils
-    vlc
     wget
     xdotool
     zathura-pdf-poppler
