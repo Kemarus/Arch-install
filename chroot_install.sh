@@ -7,6 +7,7 @@ userName="username"
 userPassword="password"
 
 basePackages=(
+    git
     stow
 )
 
