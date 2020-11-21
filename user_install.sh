@@ -21,18 +21,18 @@ aur_packages=(
 
 arch_aur_manager() {
     #Install yaourt
-    wget -P /tmp https://aur.archlinux.org/packages/pa/package-query/package-query.tar.gz
+    wget -P /tmp https://aur.archlinux.org/cgit/aur.git/snapshot/package-query.tar.gz
     tar -xvf /tmp/package-query.tar.gz -C /tmp
     cd /tmp/package-query
     makepkg -si --noconfirm
 
-    wget -P /tmp https://aur.archlinux.org/packages/ya/yaourt/yaourt.tar.gz
+    wget -P /tmp https://aur.archlinux.org/cgit/aur.git/snapshot/yaourt.tar.gz
     tar -xvf /tmp/yaourt.tar.gz -C /tmp
     cd /tmp/yaourt
     makepkg -si --noconfirm
 
     #Install aura
-    wget -P /tmp https://aur.archlinux.org/packages/au/aura-bin/aura-bin.tar.gz
+    wget -P /tmp https://aur.archlinux.org/cgit/aur.git/snapshot/aura-bin.tar.gz
     tar -xvf /tmp/aura-bin.tar.gz -C /tmp
     cd /tmp/aura-bin
     makepkg -si --noconfirm
