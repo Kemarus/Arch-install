@@ -85,8 +85,19 @@ arch_vim() {
     mkdir -p ~/.cache/vim
 }
 
+arch_pip_install() {
+    #Test if pip command exists.
+    hash pip &> /dev/null
+    if [[ $? -ne 0 ]]; then
+        wget -P /tmp https://bootstrap.pypa.io/get-pip.py
+        sudo python2 /tmp/get-pip.py
+        sudo python3 /tmp/get-pip.py
+    fi
+}
+
 arch_aur_manager
 arch_aur_packages_install
 arch_oh_my_zsh_install
 arch_user_stow
 arch_vim
+arch_pip_install
