@@ -14,6 +14,7 @@ basePackages=(
 )
 
 packages=(
+    alsa-utils
     chromium
     cinnamon
     clementine
@@ -38,12 +39,14 @@ packages=(
     ranger
     rxvt-unicode
     skype
+    sysstat
     thunderbird
     ttf-anonymous-pro
     ttf-ubuntu-font-family-ib
     virtualbox-guest-utils
     vlc
     wget
+    xdotool
     xdg-user-dirs
     zathura-pdf-poppler
     zsh

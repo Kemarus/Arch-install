@@ -16,7 +16,6 @@ aur_packages=(
     ttf-font-awesome
     ttf-inconsolata-lgc-github
     tor-browser-en
-    xtitle-git
 )
 
 arch_aur_manager() {
