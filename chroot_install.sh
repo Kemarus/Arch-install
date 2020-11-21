@@ -108,9 +108,9 @@ arch_user_config() {
 
     useradd -m -G wheel "$userName"
     echo "$userName:$userPassword" | chpasswd
+    #Create user's home directories
     runuser -l "$userName" -c "xdg-user-dirs-update"
 
-    #Create user's home directories
     mv /root/user_install.sh /home/$userName
 }
 
