@@ -13,7 +13,10 @@ aur_packages=(
 )
 
 arch_aur_manager() {
+    #Creates ~/.gnupg directory
+    gpg --list-keys
     sed -i 's/^#keyserver-options auto-key-retrieve/keyserver-options auto-key-retrieve/' ~/.gnupg/gpg.conf
+    sudo pacman-key --refresh-keys
 
     #Install cower (pacaur's dependency)
     wget -P /tmp https://aur.archlinux.org/cgit/aur.git/snapshot/cower.tar.gz
