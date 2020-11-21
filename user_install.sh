@@ -43,7 +43,6 @@ arch_oh_my_zsh_install() {
     cd /tmp
 
     wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
-    wget https://raw.github.com/tonyseek/oh-my-zsh-seeker-theme/master/install.sh -O - | zsh
 
     #Change default shell
     chsh -s $(which zsh)
