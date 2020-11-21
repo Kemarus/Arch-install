@@ -47,6 +47,7 @@ arch_install() {
     cp user_install.sh /mnt/root
     arch-chroot /mnt /root/chroot_install.sh
 
+    clear
     echo "Base system installed"
     echo "Unmount /mnt (umount -R /mnt), then reboot"
 }
