@@ -133,6 +133,9 @@ arch_stow(){
     cd /home/$userName/.dotfiles
     stow X11 -t /etc
     stow virtualbox -t /etc
+
+    cd /home/$userName
+    chown $userName:$userName -R .dotfiles
 }
 
 arch_services() {
