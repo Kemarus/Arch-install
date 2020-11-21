@@ -48,7 +48,6 @@ packages=(
     vlc
     wget
     xdotool
-    xdg-user-dirs
     zathura-pdf-poppler
     zsh
     zsh-completions
@@ -104,6 +103,8 @@ arch_packages_install() {
 }
 
 arch_user_config() {
+    pacman -S --noconfirm xdg-user-dirs
+
     echo "root:$rootPassword" | chpasswd
 
     useradd -m -G wheel "$userName"
