@@ -1,17 +1,5 @@
 #!/bin/bash
 
-#Rank mirrors by speed. Takes a while.
-arch_rankmirrors() {
-    echo "Ranking mirrors. May take a while."
-    cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
-    rankmirrors /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist
-
-    #Refresh package lists
-    pacman -Syy
-
-    echo "Mirrors ranked."
-}
-
 arch_partition(){
     #Create Partition table
     parted /dev/sda -s "mklabel msdos"
@@ -57,7 +45,6 @@ arch_clean() {
 }
 
 
-arch_rankmirrors
 arch_partition
 arch_install
 arch_clean
