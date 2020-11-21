@@ -4,38 +4,32 @@ aur_packages=(
     chromium-pepper-flash
     i3blocks
     j4-dmenu-desktop
-    keepassx2
     numix-circle-icon-theme-git
     numix-frost-themes
     numix-icon-theme-git
     powerline-fonts-git
-    rssowl
     sublime-text-dev
     ttf-font-awesome
-    tor-browser-en
 )
 
 arch_aur_manager() {
-    #Install yaourt
-    wget -P /tmp https://aur.archlinux.org/cgit/aur.git/snapshot/package-query.tar.gz
-    tar -xvf /tmp/package-query.tar.gz -C /tmp
-    cd /tmp/package-query
+    sed -i 's/^#keyserver-options auto-key-retrieve/keyserver-options auto-key-retrieve/' ~/.gnupg/gpg.conf
+
+    #Install cower (pacaur's dependency)
+    wget -P /tmp https://aur.archlinux.org/cgit/aur.git/snapshot/cower.tar.gz
+    tar -xvf /tmp/cower.tar.gz -C /tmp
+    cd /tmp/cower
     makepkg -si --noconfirm
 
-    wget -P /tmp https://aur.archlinux.org/cgit/aur.git/snapshot/yaourt.tar.gz
-    tar -xvf /tmp/yaourt.tar.gz -C /tmp
-    cd /tmp/yaourt
-    makepkg -si --noconfirm
-
-    #Install aura
-    wget -P /tmp https://aur.archlinux.org/cgit/aur.git/snapshot/aura-bin.tar.gz
-    tar -xvf /tmp/aura-bin.tar.gz -C /tmp
-    cd /tmp/aura-bin
+    #Install pacaur
+    wget -P /tmp https://aur.archlinux.org/cgit/aur.git/snapshot/pacaur.tar.gz
+    tar -xvf /tmp/pacaur.tar.gz -C /tmp
+    cd /tmp/pacaur
     makepkg -si --noconfirm
 }
 
 arch_aur_packages_install() {
-    sudo aura -A --noconfirm ${aur_packages[*]}
+    pacaur -S --noconfirm ${aur_packages[*]}
 }
 
 arch_oh_my_zsh_install() {

@@ -24,6 +24,7 @@ packages=(
     gnome-disk-utility
     gvim
     i3
+    keepassx2
     lightdm
     lightdm-gtk-greeter
     mpv
