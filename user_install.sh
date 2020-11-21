@@ -9,7 +9,6 @@ aur_packages=(
     numix-frost-themes
     numix-icon-theme-git
     powerline-fonts-git
-    rofi
     rssowl
     sublime-text-dev
     ttf-font-awesome

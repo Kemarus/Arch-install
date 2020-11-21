@@ -37,6 +37,7 @@ packages=(
     numix-themes
     numlockx
     ranger
+    rofi
     rxvt-unicode
     skype
     sysstat
