@@ -17,6 +17,7 @@ packages=(
     chromium
     cinnamon
     clementine
+    dunst
     eog
     evince
     firefox

@@ -10,6 +10,7 @@ aur_packages=(
     numix-icon-theme-git
     powerline-fonts-git
     quickswitch-i3
+    rofi
     rssowl
     sublime-text-dev
     ttf-font-awesome
@@ -56,6 +57,7 @@ arch_user_stow() {
         rm -f /home/$USER/.zshrc
     fi
 
+    mkdir -p ~/.config/dunst
     mkdir -p ~/.config/gtk-3.0
     mkdir -p ~/.config/livestreamer
     mkdir -p ~/.config/ranger
@@ -63,6 +65,7 @@ arch_user_stow() {
     mkdir -p ~/.mplayer
 
     cd ~/.dotfiles
+    stow dunst -t ~
     stow gtk2 -t ~
     stow gtk3 -t ~
     stow ideavim -t ~
